@@ -45,6 +45,6 @@ while($sub_array=$submissions_stmt->fetch(PDO::FETCH_ASSOC)){
 
 	/*
 	* Now the_info is an array that has info 
-	* of a submission. you can do whatever you want wit the data.
+	* of a submission. you can do whatever you want with the data.
 	*/
 }
