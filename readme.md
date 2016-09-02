@@ -1,4 +1,4 @@
-### Sending SMS when ninja forms is submitted ###
+### Add more actions to ninja forms submissions ###
 
 I needed to send the user who submits some of my ninja forms an SMS. I didn't have time to fiddle with ninja forms code. So I figured I can create this.
 
@@ -14,5 +14,6 @@ How it works:
 	3- update cron_job.php 
 		 a- Update field mapping to reflect your fields.
 		 b- Update the bottom commands with code that does what you want, in my case it was calling an api with the info to send an sms to the user who submitted the ninja form.
-
+	
+	4- add cron_job.php to your server's cron jobs. 
 Hope this helps...
