@@ -5,7 +5,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
 //Prepare the statment to get post id using submission id
-$post_id_stmt=$conn->prepare("SELECT post_id FROM wp_postmeta WHERE meta_key='_seq_num' AND meta_value=:sub_id");
+$post_id_stmt=$conn->prepare("SELECT post_id FROM wp_postmeta WHERE meta_key='_seq_num' AND meta_value=:sub_id ORDER BY meta_id DESC LIMIT 1");
 
 //Prepare the statment to get submitted info using post id
 $info_stmt=$conn->prepare("SELECT meta_key, meta_value FROM wp_postmeta WHERE post_id=:post_id");
